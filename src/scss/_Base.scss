@@ -1,0 +1,52 @@
+/*
+COLORS
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+*/
+
+//  selecting all element in using *
+//  it will put the styles that are used in the bracket
+//  directly in the all elements
+//  * is called universal element  
+*{
+    margin: 0em;
+    padding: 0em;
+}
+//psudo elements are not affected by html and that is 
+//why we are separately selecting ::before and ::after
+/*  *{
+            box-sizing: border-box;
+    }
+    earlier we used to write that way but it's not so efficient
+    because it afects each and every element and it can't be over-written
+    so we wre using {box-sizzing:border-box} in html and then inheriting that 
+    in *{
+    }, so if we change the property in html{} it will effect in the *{}
+ */
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+// selecting root elements by using html
+// html is the root element
+// it indirectly put this style in its child elements 
+// that's why it can be over-ridden
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #eb2f64;
+}
